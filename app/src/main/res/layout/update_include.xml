@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:background="@color/colorAccentWhite"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:fitsSystemWindows="true">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleMarginStart="48dp"
+            app:expandedTitleMarginEnd="64dp">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary">
+
+                <ImageView
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:background="@drawable/white_outer_border"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:id="@+id/imageView" />
+
+
+                <ImageView
+                    android:id="@+id/student_profile_iv"
+                    android:layout_width="68dp"
+                    android:layout_height="68dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/profile_circular_border_imageview" />
+
+
+                <TextView
+                    android:id="@+id/student_update_initial"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignLeft="@+id/student_profile_iv"
+                    android:layout_alignTop="@+id/student_profile_iv"
+                    android:layout_alignRight="@+id/student_profile_iv"
+                    android:layout_alignBottom="@+id/student_profile_iv"
+                    android:layout_margin="1dp"
+                    android:gravity="center"
+                    android:textSize="28sp"
+                    android:text="SB"
+                    android:textColor="#000000" />
+
+
+                <TextView
+                    android:id="@+id/update_student_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:layout_marginTop="11dp"
+                    android:text="--"
+                    android:textColor="@color/colorAccentWhite"
+                    android:textSize="17sp"
+                    android:layout_below="@+id/imageView"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:id="@+id/update_student_school_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="school name"
+                    android:textAppearance="@style/TextAppearance.FontPath.Roboto.Light"
+                    android:textColor="@color/colorAccentWhite"
+                    android:textSize="12sp"
+                    android:layout_below="@+id/update_student_name"
+                    android:layout_alignParentStart="true" />
+
+            </RelativeLayout>
+
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="46dp"
+            android:background="@color/colorAccentWhite"
+            android:weightSum="1">
+
+            <RelativeLayout
+                android:id="@+id/date_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/date_wrapper"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:textSize="18sp"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="start"
+                    android:hint="Date"
+                    android:textColor="@color/faded_text"
+                    android:id="@+id/in_date"
+                    android:background="@null" />
+
+                    <View
+                        android:id="@+id/date_line"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/faded_text" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <ImageView
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:background="@drawable/ic_calendar"
+                    android:gravity="center_vertical"
+                    android:id="@+id/btn_date"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/lesson_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewEnd">
+            <Spinner
+                style="@style/spinner_style"
+                android:id="@+id/lesson_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:textSize="18sp"
+                android:gravity="left"
+                android:layout_marginLeft="-5dp"
+                />
+
+            <View
+                android:id="@+id/lesson_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/faded_text" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/time_wrapper"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="viewEnd">
+
+                <TextView
+                    android:id="@+id/update_time"
+                    android:textColor="@color/faded_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@null"
+                    android:textSize="18sp"
+                    android:gravity="center_vertical"
+                    android:hint="Fluency" />
+
+                    <View
+                        android:id="@+id/time_line"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:paddingTop="15dp"
+                        android:background="@color/faded_text" />
+                </android.support.design.widget.TextInputLayout>
+
+                <ImageView
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:background="@drawable/stopwatch"
+                    android:gravity="center_vertical"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/missed_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintAnimationEnabled="true"
+                android:textAlignment="viewEnd">
+
+                <EditText
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:textSize="18sp"
+                android:background="@null"
+                android:textColor="@color/faded_text"
+                android:gravity="center_vertical"
+                android:digits="0123456789"
+                android:inputType="number"
+                android:text="Words Missed"
+                android:id="@+id/words_missed" />
+
+                <View
+                    android:id="@+id/missed_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/faded_text" />
+
+                </android.support.design.widget.TextInputLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/chevron"
+                android:gravity="center_vertical"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true" />
+
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/mood_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewEnd">
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:gravity="center_vertical"
+                android:text="Mood (select one)"
+                android:textColor="#000000"
+                android:id="@+id/textView" />
+            </android.support.design.widget.TextInputLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:paddingTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center">
+
+                <LinearLayout
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:id="@+id/radio_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/bad_frown"
+                            android:layout_width="40dp"
+                            android:button="@null"
+                            android:checked="false"
+                            android:layout_height="40dp"
+                            android:background="@drawable/bad_frown_selector" />
+                        <Space
+                            android:layout_width="0dp"
+                            android:layout_height="1dp"
+                            android:layout_weight="1" />
+
+                        <RadioButton
+                            android:id="@+id/frown"
+                            android:button="@null"
+                            android:checked="false"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/frown_selector" />
+                        <Space
+                            android:layout_width="0dp"
+                            android:layout_height="1dp"
+                            android:layout_weight="1" />
+
+                        <RadioButton
+                            android:id="@+id/neutral"
+                            android:button="@null"
+                            android:checked="false"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/neutral_selector" />
+
+                        <Space
+                            android:layout_width="0dp"
+                            android:layout_height="1dp"
+                            android:layout_weight="1" />
+
+                        <RadioButton
+                            android:id="@+id/happy"
+                            android:button="@null"
+                            android:checked="false"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/happy_selector"/>
+                        <Space
+                            android:layout_width="0dp"
+                            android:layout_height="1dp"
+                            android:layout_weight="1" />
+
+                        <RadioButton
+                            android:button="@null"
+                            android:checked="false"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/very_happy_selector"
+                            android:id="@+id/very_happy" />
+
+                    </RadioGroup>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:hint="1"
+                        android:textSize="15sp"
+                        android:gravity="center" />
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:hint="2"
+                        android:textSize="15sp"
+                        android:gravity="center" />
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:hint="3"
+                        android:textSize="15sp"
+                        android:gravity="center" />
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:hint="4"
+                        android:textSize="15sp"
+                        android:gravity="center" />
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:hint="5"
+                        android:textSize="15sp"
+                        android:gravity="center" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_marginTop="20dp">
+
+                <com.interapt.togglit.ui.custom.views.CustomizableButtonView
+                    android:id="@+id/button_submit"
+                    android:layout_width="213dp"
+                    android:layout_height="37dp"
+                    android:stateListAnimator="@null"
+                    android:clickable="true"
+                    android:textColor="@color/colorAccentWhite"
+                    android:text="Submit"
+                    android:textAppearance="@style/TextAppearance.FontPath.Roboto.Regular"
+                    android:textSize="16sp"
+                    android:theme="@style/accountButton"
+                    android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.design.widget.CoordinatorLayout>

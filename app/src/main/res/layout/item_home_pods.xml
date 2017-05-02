@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools=" http://schemas.android.com/tools"
+    android:id="@+id/item_pod_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/pods_grey_background"
+    android:orientation="vertical"
+    tools:ignore="MissingPrefix">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:background="@color/cardview_light_background"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/pod_img_item"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+        <TextView
+            android:id="@+id/pod_text_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/this_is_the_name_of_the_pod"
+            android:textAppearance="@style/TextAppearance.FontPath.Roboto.Regular"
+            android:textSize="14sp"
+            android:textStyle="normal" />
+
+
+        <TextView
+            android:id="@+id/pod_text_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingBottom="5dp"
+            android:text="@string/this_is_the_description_of_the_pod"
+            android:textAppearance="@style/TextAppearance.FontPath.Roboto.Light"
+            android:textColor="@color/tv_color_black"
+            android:textSize="12sp"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+
+</LinearLayout>

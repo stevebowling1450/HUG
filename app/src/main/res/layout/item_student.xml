@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/student_item_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorAccentWhite"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <ImageView
+        android:id="@+id/student_imageview"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:contentDescription="student image"
+        android:scaleType="fitStart"
+        android:src="@drawable/profile_circular_border_imageview" />
+
+
+    <TextView
+        android:id="@+id/student_initial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/student_imageview"
+        android:layout_alignLeft="@+id/student_imageview"
+        android:layout_alignRight="@+id/student_imageview"
+        android:layout_alignTop="@+id/student_imageview"
+        android:layout_margin="1dp"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center"
+        android:text="Hello"
+        android:textColor="#000000"
+        android:textSize="28sp" />
+
+    <TextView
+        android:id="@+id/student_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/student_imageview"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@+id/student_imageview"
+        android:fontFamily="sans-serif-light"
+        android:paddingEnd="12dp"
+        android:paddingStart="16dp"
+        android:textColor="@color/colorPrimaryBlue"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/school_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/student_name"
+        android:layout_toEndOf="@+id/student_imageview"
+        android:paddingEnd="12dp"
+        android:paddingStart="16dp"
+        android:textAppearance="@style/TextAppearance.FontPath.Roboto.Light"
+        android:textSize="13sp" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/student_imageview"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="14dp"
+        android:background="#d6d6d6" />
+
+
+</RelativeLayout>

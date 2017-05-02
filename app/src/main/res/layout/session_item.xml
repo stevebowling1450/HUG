@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/session_list_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="15dp">
+
+    <TextView
+        android:id="@+id/students_lesson"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:textSize="15sp" />
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/attempt_one"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/square"
+            android:backgroundTint="@color/colorPrimary"
+            app:layout_widthPercent="20%" />
+
+        <TextView
+
+            android:id="@+id/attempt_one_text"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_toEndOf="@+id/attempt_one"
+            android:gravity="start|center_vertical"
+            android:textColor="@color/colorPrimaryBlue"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_marginLeftPercent="2.5%"
+            tools:text="20%" />
+    </android.support.percent.PercentRelativeLayout>
+
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+
+            android:id="@+id/attempt_two"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/square"
+            android:backgroundTint="@color/darkColorPrimary"
+            app:layout_widthPercent="80%" />
+
+        <TextView
+            android:id="@+id/attempt_two_text"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@+id/attempt_two"
+            android:gravity="start|center_vertical"
+            android:textColor="@color/darkColorPrimary"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_marginLeftPercent="2.5%"
+            tools:text="80%" />
+    </android.support.percent.PercentRelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:orientation="vertical"
+        android:textAlignment="center">
+
+        <View
+            android:id="@+id/center"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true" />
+
+        <LinearLayout
+            android:id="@+id/left_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/center"
+            android:layout_marginTop="40dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/first_attempt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:maxLines="2"
+                android:paddingEnd="15dp"
+                android:text="@string/_1st_attempt_n_averages"
+                android:textAlignment="center"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/first_attempt_fluency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingEnd="15dp"
+                android:paddingTop="36dp"
+                android:text="@string/fluency"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/first_attempt_fluency_display_average"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingEnd="15dp"
+                android:textAlignment="center"
+                android:textColor="#00b2e2"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/first_attempt_accumen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingEnd="15dp"
+                android:paddingTop="36dp"
+                android:text="@string/acumen"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/first_attempt_accumen_display_average"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textColor="#00b2e2"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/first_attempt_mood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingTop="30dp"
+                android:text="@string/mood"
+                android:textAlignment="center" />
+
+            <ImageView
+                android:id="@+id/first_attempt_mood_display_average"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:textAlignment="center"
+                android:tint="#00b2e2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/right_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/left_layout"
+            android:layout_toEndOf="@+id/left_layout"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/second_attempt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:maxLines="2"
+                android:text="@string/_2nd_attempt_n_averages"
+                android:textAlignment="center"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/second_attempt_fluency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingTop="36dp"
+                android:text="@string/fluency"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/second_attempt_fluency_display_average"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textColor="#1b3d6e"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/second_attempt_accumen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingTop="36dp"
+                android:text="@string/acumen"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/second_attempt_accumen_display_average"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textColor="#1b3d6e"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/second_attempt_mood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingTop="30dp"
+                android:text="@string/mood"
+                android:textAlignment="center" />
+
+            <ImageView
+                android:id="@+id/second_attempt_mood_display_average"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:textAlignment="center"
+                android:tint="#1b3d6e" />
+        </LinearLayout>
+    </RelativeLayout>
+</android.support.v4.widget.NestedScrollView>

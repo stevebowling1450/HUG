@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:sothree="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_grey_background"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        android:id="@+id/content_calendar_day_month_title"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_day_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="12"
+            android:textAppearance="@style/TextAppearance.FontPath.Roboto.Bold"
+            android:textStyle="bold"
+            android:textColor="@color/colorAccentWhite"
+            android:textSize="100sp" />
+
+        <TextView
+            android:id="@+id/tv_event_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Event Date"
+            android:textAppearance="@style/TextAppearance.FontPath.Roboto.Bold"
+            android:textColor="@color/colorAccentWhite"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_number_of_events"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="number of events"
+            android:textAppearance="@style/TextAppearance.FontPath.Roboto.Bold"
+            android:textColor="@color/colorAccentWhite"
+            android:textSize="15sp"
+            android:textStyle="italic" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@android:color/black">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/chevron_calendar_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_chevron_left" />
+
+            <TextView
+                android:id="@+id/calendar_month_text_date"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="JANUARY 2016"
+                android:textAppearance="@style/TextAppearance.FontPath.Roboto.Bold"
+                android:textColor="@color/colorAccentWhite" />
+
+            <ImageView
+                android:id="@+id/chevron_calendar_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_chevron_right" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <com.sothree.slidinguppanel.SlidingUpPanelLayout
+        android:id="@+id/sliding_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorAccentWhite"
+        android:gravity="bottom"
+        sothree:umanoPanelHeight="25dp"
+        sothree:umanoShadowHeight="4dp">
+
+
+        <com.github.sundeepk.compactcalendarview.CompactCalendarView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/compact_calendar_view"
+            android:layout_width="fill_parent"
+            android:layout_height="280dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="30dp"
+            app:compactCalendarBackgroundColor="@color/colorAccentWhite"
+            app:compactCalendarCurrentDayBackgroundColor="@color/colorPrimary"
+            app:compactCalendarCurrentSelectedDayBackgroundColor="#efefef"
+            app:compactCalendarEventIndicatorStyle="small_indicator"
+            app:compactCalendarOtherMonthDaysTextColor="#efefef"
+            app:compactCalendarTargetHeight="300dp"
+            app:compactCalendarTextColor="@android:color/black"
+            app:compactCalendarTextSize="12sp">
+
+        </com.github.sundeepk.compactcalendarview.CompactCalendarView>
+
+        <include layout="@layout/recycler_calendar_selected_day_events" />
+
+    </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+</LinearLayout>

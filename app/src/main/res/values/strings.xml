@@ -1,0 +1,172 @@
+<resources>
+    <string name="app_name">HUG Reading</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+
+    <!--List listpage-->
+    <string name="txt_list_page_toolbar_title">List</string>
+
+    <!--Welcome screen-->
+    <string name="txt_login_button">Log in</string>
+    <string name="txt_sing_up_button">Sign up</string>
+    <string name="txt_guest_user_button" formatted="false"><u>Continue as Guest</u></string>
+
+
+    <!-- Error Mensajes -->
+    <string name="snack_close_button">Close</string>
+    <string name="error_get_user_data">Unable to retrieve user data, please try again.</string>
+    <string name="error_get_app_settings">Unable to retrieve App settigns.</string>
+    <string name="unexpected_error">Unexpected error, please try again.</string>
+    <string name="firebase_auth_error">Authentication error, please trye again.</string>
+    <string name="error_forgot_password">Unable to reset password, please try again</string>
+
+    <!--Ads-->
+    <string name="close_ad" formatted="false"><u>Close Ad</u></string>
+
+    <!--Sign up-->
+    <string name="txt_sign_up_toolbar_title">Sign up</string>
+    <string name="txt_input_layout_hint_email">Email</string>
+    <string name="txt_input_layout_hint_password">Password</string>
+    <string name="txt_input_layout_hint_confirm_password">Confirm Password</string>
+
+    <!--Log in-->
+    <string name="txt_log_in_toolbar_title">Log in</string>
+    <string name="txt_input_layout_hint_log_in_email">Email</string>
+    <string name="txt_input_layout_hint_log_in_password">Password</string>
+
+    <!--forgot password-->
+    <string name="txt_forgot_password_toolbar_title">Forgot password</string>
+    <string name="txt_forgot_password_submit_button">Submit</string>
+    <string name="txt_forgot_password_open_email_button">Open mail</string>
+    <string name="txt_forgot_password_button">Submit</string>
+    <string name="txt_forgot_password_success">Success!</string>
+    <string name="txt_forgot_password_description">Check your email for a link to reset your password.</string>
+
+    <!--Menu-->
+    <string name="sign_up_log_in_toolbar_item">Log in</string>
+    <string name="log_in_log_in_toolbar_item">Sign up</string>
+    <string name="error_invalid_email">Invalid email</string>
+    <string name="error_invalid_password">Invalid password</string>
+    <string name="error_passwords_do_not_match">Passwords do not match</string>
+    <string name="title_activity_login">Log in</string>
+    <string name="log_out_menu_item">Log out</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="message_no_content">There is not content to show!</string>
+    <string name="message_no_info_content">There is not information about this event!</string>
+
+    <!--Settigns-->
+    <string name="navigation_menu_item_settings">Settings</string>
+    <string name="txt_settings_toolbar_title">Settings</string>
+    <string name="settings_push_notifications_item_title">Push notifications</string>
+    <string name="settings_app_support_item_title"><![CDATA[App support & feedback]]></string>
+    <string name="settings_share_app_item_title">Share this app</string>
+    <string name="settings_rate_app_item_title">Rate this app</string>
+    <string name="settings_version_item_title">Version</string>
+    <string name="settings_terms_privacy_item_title"><![CDATA[Terms & privacy]]></string>
+    <string name="settings_logout_item_title">Logout</string>
+    <string name="settings_log_in_item_title">Log in</string>
+
+
+    <!--Doorbell-->
+    <string name="doorbel_submit_button_title">Submit</string>
+    <string name="doorbell_message_hint_message">What would you like to tell us?</string>
+
+
+    <!--Internet connection-->
+    <string name="offline_mod_dialog_title">There is not Internet connection</string>
+    <string name="offline_mod_dialog_content">Checking connectivity…</string>
+    <string name="offline_mod_dialog_button">Check connectivity</string>
+
+    <string name="loading_video">Loading video…</string>
+
+    <!--Events-->
+    <string name="txt_events_toolbar_title">Events</string>
+    <string name="txt_event_detail_toolbar_title">Event Detail</string>
+
+
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+    <string name="dialog_invalid_address_message">Cannot get directions because a valid address is not available.</string>
+    <string name="dialog_invalid_address_btn_text">OK</string>
+    <string name="lesson">"Lesson "</string>
+    <string name="lesson_guide">Lesson Guide</string>
+    <string name="progress_report">Progress Report</string>
+    <string name="volunteer_profile_toolbar_title">Volunteer Profile</string>
+    <string name="volunteer_toolbar_title">Volunteer Directory</string>
+    <string name="filter_image">filter image</string>
+    <string name="student_directory">Student Directory</string>
+
+
+    <string-array name="lesson_array">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+    <string name="title_activity_student_profile">StudentProfileActivity</string>
+    <string name="emergency_contact_phone_number">PRIMARY VOLUNTEER PHONE NUMBER</string>
+    <string name="emergency_contact_name">EMERGENCY CONTACT</string>
+    <string name="email_address">EMAIL ADDRESS</string>
+    <string name="alt_phone_number">ALT. PHONE NUMBER</string>
+    <string name="phone_number">PHONE NUMBER</string>
+    <string name="primary">Primary</string>
+    <string name="pleaseComplete">Please Complete All Fields</string>
+    <string name="percent">%</string>
+    <string name="load">----</string>
+    <string name="Lesson">Lesson</string>
+    <string name="dash_lesson_detail">----</string>
+    <string name="total_words">TOTAL WORDS</string>
+    <string name="mood">MOOD</string>
+    <string name="acumen">ACUMEN</string>
+    <string name="fluency">FLUENCY</string>
+    <string name="_2nd_attempt_n_averages">2nd Attempt   Averages</string>
+    <string name="_1st_attempt_n_averages">1st Attempt   Averages</string>
+    <string name="date">DATE</string>
+    <string name="_2nd_attempt">2nd Attempt</string>
+    <string name="_1st_attempt">1st Attempt</string>
+    <string name="student_profile">Student Profile</string>
+    <string name="dashes">---</string>
+    <string name="primary_volunteer_name">PRIMARY VOLUNTEER NAME</string>
+    <string name="dra_1">DRA 1</string>
+    <string name="dra_2">DRA 2</string>
+    <string name="dra_3">DRA 3</string>
+    <string name="school_address">SCHOOL ADDRESS</string>
+    <string name="student_goal_clarity_person_nemail_address">STUDENT GOAL CLARITY PERSON  EMAIL</string>
+    <string name="student_goal_clarity_person_nphone_number">STUDENT GOAL CLARITY PERSON  PHONE</string>
+    <string name="student_goal_clarity_person">STUDENT GOAL CLARITY PERSON</string>
+    <string name="principal_email_address">PRINCIPAL EMAIL ADDRESS</string>
+    <string name="principal_name">PRINCIPAL</string>
+    <string name="phone_number_school">PHONE NUMBER</string>
+    <string name="primary_volunteer_email_address">PRIMARY VOLUNTEER EMAIL ADDRESS</string>
+    <string name="view_information_about_volunteers">View information about volunteers</string>
+    <string name="volunteer_information">Volunteer Information</string>
+    <string name="view_student_profile_and_add_reading_progress">View student profile and add reading progress</string>
+    <string name="student_information">Student Information</string>
+    <string name="view_upcoming_scheduled_reading_events">View upcoming scheduled reading events</string>
+    <string name="volunteer_schedule">Volunteer Schedule</string>
+    <string name="hug_reading_program">HUG Reading Program</string>
+    <string name="school_profile">School Profile</string>
+    <string name="lesson_number">LESSON NUMBER</string>
+    <string name="all_schools">All Schools</string>
+    <string name="this_is_the_name_of_the_pod">This is the name of the POD</string>
+    <string name="this_is_the_description_of_the_pod">This is the description of the POD</string>
+    <string name="title">title</string>
+    <string name="student_image">student_image</string>
+    <string name="name">NAME</string>
+    <string name="fluency1">Fluency</string>
+    <string name="minutes">Minutes</string>
+    <string name="seconds">Seconds</string>
+    <string name="lesson_numbers">Lesson Number</string>
+    <string name="no_events">No events</string>
+
+</resources>

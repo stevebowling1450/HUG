@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccentWhite"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/settings_items"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/powered_logo"
+        android:background="@color/colorAccentWhite"
+        android:fillViewport="true"
+        android:paddingLeft="20dp"
+        android:textDirection="anyRtl">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--<RelativeLayout-->
+                <!--android:id="@+id/content_push_notifications"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="85dp"-->
+                <!--android:visibility="gone"-->
+                <!--android:clickable="true">-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_push_notification"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:text="@string/settings_push_notifications_item_title"-->
+                    <!--android:textAppearance="@style/TextAppearance.FontPath.Roboto.Regular" />-->
+
+                <!--<View-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="1dp"-->
+                    <!--android:layout_alignParentBottom="true"-->
+                    <!--android:background="@color/color_list_separator_light_grey" />-->
+
+                <!--<ImageView-->
+                    <!--android:layout_width="23dp"-->
+                    <!--android:layout_height="23dp"-->
+                    <!--android:layout_alignParentEnd="true"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_marginRight="5dp"-->
+                    <!--android:src="@drawable/ic_list_item_arrow" />-->
+            <!--</RelativeLayout>-->
+
+            <RelativeLayout
+                android:id="@+id/content_app_support_and_feedback"
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:clickable="true">
+
+                <TextView
+                    android:textSize="17sp"
+                    android:id="@+id/tv_app_support"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/settings_app_support_item_title"
+                    android:textAppearance="@style/TextAppearance.FontPath.Roboto.Regular" />
+
+
+                <ImageView
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/ic_list_item_arrow"
+                    android:id="@+id/imageView3" />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/color_list_separator_light_grey"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/content_share_app"
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:clickable="true">
+
+                <TextView
+                    android:textSize="17sp"
+                    android:id="@+id/tv_share_app"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/settings_share_app_item_title"
+                    android:textAppearance="@style/TextAppearance.FontPath.Roboto.Regular" />
+
+
+                <ImageView
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/ic_list_item_arrow" />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/color_list_separator_light_grey" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/content_rate_app"
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:clickable="true">
+
+                <TextView
+                    android:textSize="17sp"
+                    android:id="@+id/tv_rate_app"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/settings_rate_app_item_title"
+                    android:textAppearance="@style/TextAppearance.FontPath.Roboto.Regular" />
+
+
+                <ImageView
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/ic_list_item_arrow" />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/color_list_separator_light_grey" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/content_version"
+                android:layout_width="match_parent"
+                android:layout_height="85dp">
+
+                <TextView
+                    android:textSize="17sp"
+                    android:id="@+id/tv_version"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/settings_version_item_title"
+                    android:textAppearance="@style/TextAppearance.FontPath.Roboto.Regular" />
+
+                <TextView
+                    android:id="@+id/tv_version_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:text="1.1"
+                    android:textAppearance="@style/TextAppearance.FontPath.Roboto.Regular"
+                    android:textColor="@color/lb_grey" />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/color_list_separator_light_grey" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/content_terms"
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:clickable="true">
+
+                <TextView
+                    android:textSize="17sp"
+                    android:id="@+id/tv_terms"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/settings_terms_privacy_item_title"
+                    android:textAppearance="@style/TextAppearance.FontPath.Roboto.Regular" />
+
+
+                <ImageView
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/ic_list_item_arrow" />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/color_list_separator_light_grey" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/content_log_out"
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:clickable="true">
+
+                <TextView
+                    android:textSize="17sp"
+                    android:id="@+id/tv_log_out"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/settings_logout_item_title"
+                    android:textAppearance="@style/TextAppearance.FontPath.Roboto.Regular" />
+
+                <TextView
+                    android:id="@+id/tv_log_out_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:textAppearance="@style/TextAppearance.FontPath.Roboto.Regular"
+                    android:textColor="@color/lb_grey" />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/color_list_separator_light_grey" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:id="@+id/powered_logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="20dp"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:layout_width="174dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/interapt_final_logo_powered" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorAccentWhite"
+        android:orientation="vertical">
+
+    <com.interapt.togglit.ui.custom.views.CustomizableToolbar
+        android:id="@+id/student_profile_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_scrollFlags="scroll|exitUntilCollapsed"
+        app:theme="@style/AppTheme.AppBarOverlayGreen">
+
+        <TextView
+
+            android:id="@+id/student_bar_title"
+            style="@style/greenToolBarTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:ellipsize="end"
+            android:text="@string/student_profile"
+            android:textSize="19sp" />
+
+
+    </com.interapt.togglit.ui.custom.views.CustomizableToolbar>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:background="@drawable/white_outer_border" />
+
+
+        <ImageView
+            android:id="@+id/student_profile_iv"
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/profile_circular_border_imageview" />
+
+
+        <TextView
+            android:id="@+id/student_profile_initial"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/student_profile_iv"
+            android:layout_alignLeft="@+id/student_profile_iv"
+            android:layout_alignRight="@+id/student_profile_iv"
+            android:layout_alignTop="@+id/student_profile_iv"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:gravity="center"
+            android:text="--"
+            android:textColor="#000000"
+            android:textSize="28sp" />
+
+
+        <TextView
+            android:id="@+id/student_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/student_profile_initial"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="11dp"
+            android:text="Student name"
+            android:textAlignment="center"
+            android:textColor="@color/colorAccentWhite"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/student_school_name_profile_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/student_name"
+            android:layout_below="@+id/student_name"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="school name"
+            android:textAppearance="@style/TextAppearance.FontPath.Roboto.Light"
+            android:textColor="@color/colorAccentWhite"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="60dp"
+            android:background="@color/colorAccentWhite">
+
+            <View
+                android:id="@+id/student_fakeView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_centerInParent="true" />
+
+            <TextView
+                android:id="@+id/pri_vol_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/emergency_cont"
+                android:paddingEnd="40dp"
+                android:paddingStart="20dp"
+                android:paddingTop="20dp"
+                android:text="@string/primary_volunteer_name"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/pri_vol_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pri_vol_name"
+                android:paddingEnd="40dp"
+                android:paddingStart="20dp"
+                android:text="@string/dashes"
+                android:textColor="@color/black_alpha_40"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/pri_vol_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pri_vol_name_tv"
+                android:paddingEnd="40dp"
+                android:paddingStart="20dp"
+                android:paddingTop="20dp"
+                android:text="@string/primary_volunteer_email_address"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/pri_vol_phone_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pri_vol_phone"
+                android:autoLink="email"
+                android:paddingEnd="40dp"
+                android:paddingStart="20dp"
+                android:text="@string/dashes"
+                android:textColorLink="@color/black_alpha_40"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/emergency_cont"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pri_vol_phone_tv"
+                android:paddingEnd="40dp"
+                android:paddingStart="20dp"
+                android:paddingTop="20dp"
+                android:text="@string/emergency_contact_name"
+                android:textColor="@color/colorPrimary"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/emergency_cont_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/emergency_cont"
+                android:paddingEnd="40dp"
+                android:paddingStart="20dp"
+                android:text="@string/dashes"
+                android:textColor="@color/black_alpha_40"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/emergency_cont_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/emergency_cont_tv"
+                android:paddingEnd="40dp"
+                android:paddingStart="20dp"
+                android:paddingTop="20dp"
+                android:text="@string/emergency_contact_phone_number"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/volun_cont_phone_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/emergency_cont_phone"
+                android:autoLink="phone"
+                android:paddingEnd="40dp"
+                android:paddingStart="20dp"
+                android:text="@string/dashes"
+                android:textColorLink="@color/black_alpha_40"
+                android:textSize="15sp" />
+
+            <com.interapt.togglit.ui.custom.views.CustomizableButtonView
+                android:id="@+id/button_view_prog"
+                android:layout_width="213dp"
+                android:layout_height="45dp"
+                android:layout_below="@+id/volun_cont_phone_tv"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="90dp"
+                android:stateListAnimator="@null"
+                android:textAppearance="@style/TextAppearance.FontPath.Roboto.Regular"
+                android:textSize="15sp"
+                android:theme="@style/accountButton" />
+
+            <com.interapt.togglit.ui.custom.views.CustomizableButtonView
+
+                android:id="@+id/button_update_prog"
+                android:layout_width="213dp"
+                android:layout_height="45dp"
+                android:layout_below="@+id/button_view_prog"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:stateListAnimator="@null"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="30dp"
+                android:textAppearance="@style/TextAppearance.FontPath.Roboto.Regular"
+                android:textSize="15sp"
+                android:theme="@style/accountButton" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,215 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!--   your app branding color for the app bar -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+
+        <!--   darker variant for the status bar and contextual app bars -->
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <!--   theme UI controls like checkboxes and text fields -->
+        <item name="colorAccent">#5fa3d0</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <item name="colorButtonNormal">@color/colorPrimaryDark</item>
+        <item name="colorControlNormal">@color/tv_color_black</item>
+        <item name="colorControlActivated">@color/tv_color_black</item>
+        <item name="actionMenuTextAppearance">@style/MyMenuTextAppearance</item>
+        <item name="alertDialogTheme">@style/AppCompatAlertDialogStyle</item>
+
+    </style>
+
+
+
+
+    <style name="AppCompatAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">#5fa3d0</item>
+        <item name="android:textColorPrimary">@android:color/black</item>
+        <item name="android:background">@color/colorPrimary</item>
+    </style>
+
+    <style name="TimePickerStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="colorPrimary">@color/colorPrimaryBlue</item>
+        <item name="android:textColor">@color/black_alpha_40</item>
+    </style>
+
+
+    <style name="MyMenuTextAppearance" parent="android:TextAppearance.Holo.Widget.ActionBar.Menu">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">15sp</item>
+
+    </style>
+
+    <style name="TextAppearence.App.TextInputLayout" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/tv_color_black</item>
+    </style>
+
+    <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">@color/colorPrimary</item>
+    </style>
+
+    <!--Handling text size and item height into Navigation drawer menu items-->
+    <style name="NavigationViewStyle">
+        <item name="android:textSize">17sp</item> <!-- menu item text size-->
+        <item name="android:listPreferredItemHeightSmall">60dp</item><!-- menu item height-->
+    </style>
+
+    <style name="custom_toolbar" parent="@style/Widget.AppCompat.Toolbar">
+        <item name="titleTextColor">@color/secondary_text</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBarOverlay">true</item>
+        <item name="colorControlNormal">@color/color_control_normal_white</item>
+        <item name="colorControlActivated">@color/color_control_normal_white</item>
+    </style>
+
+    <!--Usu this style just for Settings activity-->
+    <style name="AppTheme.NoActionBarSettings">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBarOverlay">true</item>
+        <item name="colorControlNormal">#5fa3d0</item>
+        <item name="colorControlActivated">#5fa3d0</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <!-- Change background color Toolbar -->
+        <item name="android:background">@android:color/transparent</item>
+        <item name="colorPrimary">@android:color/transparent</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/color_control_normal_white</item>
+        <!-- Customize color of navigation drawer icon and back arrow -->
+        <item name="titleTextColor">@color/color_control_normal_white</item>
+        <item name="colorControlNormal">@color/color_control_normal_white</item>
+
+    </style>
+
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!--Appbar green background-->
+    <style name="AppTheme.AppBarOverlayGreen" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <!-- Change background color Toolbar -->
+        <item name="colorPrimary">@color/colorPrimaryBlue</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="android:background">@color/azureBlue</item>
+
+        <!-- Customize color of navigation drawer icon and back arrow -->
+        <item name="titleTextColor">@color/blue_tool_bar_title_color</item>
+        <item name="colorControlNormal">@color/color_control_normal_white</item>
+
+
+    </style>
+
+    <!--LoggedUserProfile custom style-->
+    <style name="AppTheme.AppBarAuthenticationOverlayGreen" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <!-- Change background color Toolbar -->
+        <item name="colorPrimary">@color/azureBlue</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!-- Customize color of navigation drawer icon and back arrow -->
+        <item name="titleTextColor">@color/blue_tool_bar_title_color</item>
+        <item name="colorControlNormal">@color/color_control_normal_white</item>
+
+
+    </style>
+
+    <!-- |||||||||||||||||||||||| Fonts Styles App |||||||||||||||||||||||||||| -->
+    <!-- Roboto -->
+
+    <style name="TextAppearance.FontPath.Roboto.Regular" parent="android:TextAppearance">
+        <item name="fontPath">fonts/Roboto-Regular.ttf</item>
+    </style>
+
+    <style name="TextAppearance.FontPath.Roboto.Light" parent="android:TextAppearance">
+        <item name="fontPath">fonts/Roboto-Light.ttf</item>
+    </style>
+
+    <style name="TextAppearance.FontPath.Roboto.Bold" parent="android:TextAppearance">
+        <item name="fontPath">fonts/Roboto-Bold.ttf</item>
+    </style>
+
+
+    <!-- |||||||||||||||||||||||| End Fonts Styles App |||||||||||||||||||||||||||| -->
+
+
+    <!-- List item green title -->
+    <style name="listItemGreenTitle">
+        <item name="android:textAppearance">@style/TextAppearance.FontPath.Roboto.Regular</item>
+        <item name="android:textColor">@color/tv_color_blue</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!-- List item black  -->
+    <style name="listItemBlack">
+        <item name="android:textAppearance">@style/TextAppearance.FontPath.Roboto.Regular</item>
+        <item name="android:textColor">@color/tv_color_black</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <!-- textAppearance Roboto Light  -->
+    <style name="textAppearanceRobotoLight">
+        <item name="android:textAppearance">@style/TextAppearance.FontPath.Roboto.Light</item>
+        <item name="android:textColor">@color/tv_color_black</item>
+        <item name="android:textSize">19sp</item>
+    </style>
+
+    <!-- textAppearance Roboto Light 15sp  -->
+    <style name="textAppearanceRobotoLightSmall">
+        <item name="android:textAppearance">@style/TextAppearance.FontPath.Roboto.Light</item>
+        <item name="android:textColor">@color/tv_color_white</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+
+    <!-- textAppearance Roboto Bold  -->
+    <style name="textAppearanceRobotoBold">
+        <item name="android:textAppearance">@style/TextAppearance.FontPath.Roboto.Bold</item>
+        <item name="android:textColor">@color/tv_color_white</item>
+        <item name="android:textSize">19sp</item>
+    </style>
+
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/background_splash</item>
+    </style>
+
+
+    <!--Button Style-->
+
+    <style name="accountButton" parent="AppTheme">
+        <item name="colorButtonNormal">@drawable/button_color_state</item>
+        <item name="android:buttonStyle">@style/AppButtonStyleDarkGreen</item>
+    </style>
+
+    <style name="AppButtonStyleDarkGreen" parent="Widget.AppCompat.Button">
+        <item name="android:textColor">@drawable/button_text_state</item>
+        <item name="android:background">@drawable/button_bg_rounded_corners_dark_green</item>
+
+    </style>
+
+    <!-- Title Green ToolBar -->
+    <style name="greenToolBarTitle">
+        <item name="android:textAppearance">@style/TextAppearance.FontPath.Roboto.Regular</item>
+        <item name="android:textColor">@color/blue_tool_bar_title_color</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <!--TabLayout for Progress Report Activity-->
+    <style name="customTabLayout.TabText.Style" parent="AppTheme">
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <style name="spinner_style" >
+    <item name="android:prompt">@string/lesson_numbers</item>
+    <item name="android:background">@drawable/spinner_bg</item>
+    <item name="android:textSize">20sp</item>
+    </style>
+
+
+</resources>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_employee_directory"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.interapt.togglit.ui.studentDirectory.StudentDirectoryActivity">
+
+    <com.interapt.togglit.ui.custom.views.CustomizableToolbar
+        android:id="@+id/student_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_scrollFlags="scroll|exitUntilCollapsed"
+        app:theme="@style/AppTheme.AppBarOverlayGreen">
+
+        <ImageView
+            android:id="@+id/back_arrow"
+            android:layout_width="20dp"
+            android:layout_height="12dp"
+            android:background="@drawable/arrow_left" />
+
+        <TextView
+            android:id="@+id/student_bar_title"
+            style="@style/greenToolBarTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/student_directory"
+            android:textSize="18sp"
+            android:textColor="@color/colorAccentWhite"
+            android:ellipsize="end"
+            android:maxLines="1" />
+
+        <ImageView
+            android:id="@+id/filter"
+            android:layout_width="21dp"
+            android:layout_height="19dp"
+            app:srcCompat="@drawable/calendar"
+            android:layout_gravity="end"
+            android:layout_marginRight="15dp"
+            android:contentDescription="@string/filter_image" />
+    </com.interapt.togglit.ui.custom.views.CustomizableToolbar>
+
+    <include layout="@layout/loading_layout" />
+
+
+    <!--<android.support.v4.widget.SwipeRefreshLayout-->
+        <!--android:id="@+id/swipe_layout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+
+    <in.myinnos.alphabetsindexfastscrollrecycler.IndexFastScrollRecyclerView
+        android:id="@+id/student_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animationCache="true"
+        android:background="@color/colorAccentWhite" />
+
+    <!--</android.support.v4.widget.SwipeRefreshLayout>-->
+
+
+</LinearLayout>

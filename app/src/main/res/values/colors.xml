@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#00b2e2</color>
+    <color name="colorAccentWhite">#FFFFFF</color>
+    <color name="colorPrimary">#00b2e2</color>
+    <color name="colorPrimaryBlue">#00b2e2</color>
+    <color name="secondary_text">#00b2e2</color>
+    <color name="blue_tool_bar_title_color">#FFFFFF</color>
+    <color name="colorBackground">#f8f8f8</color>
+    <color name="darkColorPrimary">#1b3d6e</color>
+    <color name="azureBlue">#00b2e2</color>
+
+    <color name="color_control_normal_white">#FFFFFF</color>
+    <color name="color_control_normal_blue">#00b2e2</color>
+
+    <color name="toolbarTransparent">#00FFFFFF</color>
+    <color name="black_alpha_40">#000000</color>
+    <color name="now_playing_transparent">#b3363636</color>
+    <color name="light_grey_background">#F6F6F6</color>
+
+    <color name="colorLightGrey">#efefef</color>
+    <color name="colorSplash">#ffffff</color>
+    <color name="colorDarkBlueButton">#00b2e2</color>
+    <color name="settings_grey_background">#F6F6F6</color>
+    <color name="pods_grey_background">#F6F6F6</color>
+    <color name="settings_grey_Text_icon_background">#C3C3C3</color>
+    <color name="custom_page_description_background">#EFEFEF</color>
+
+    <!--Views-->
+    <color name="color_list_separator_light_grey">#D6D6D6</color>
+
+    <!--TextViews-->
+    <color name="tv_color_primary_dark">#00b2e2</color>
+    <color name="tv_color_black">#000000</color>
+    <color name="tv_color_blue">#00b2e2</color>
+    <color name="tv_color_white">#FFFFFF</color>
+    <color name="tv_navigation_menu_item_settings_grey">#9E9E9E</color>
+
+    <!--Calendar-->
+    <color name="calendar_selected_day_color">#9E9E9E</color>
+    <color name="faded_text">#898989</color>
+
+</resources>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.interapt.togglit.ui.custom.views.CustomizableToolbar
+            android:id="@+id/lesson_detail_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:theme="@style/AppTheme.AppBarOverlayGreen">
+
+            <TextView
+                android:id="@+id/lesson_detail_title"
+                style="@style/greenToolBarTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:ellipsize="end"
+                android:maxLines="1" />
+
+
+        </com.interapt.togglit.ui.custom.views.CustomizableToolbar>
+
+        <TextView
+            android:id="@+id/lesson_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingBottom="3dp"
+            android:paddingTop="23dp"
+            android:text="@string/dash_lesson_detail"
+            android:textColor="@color/colorPrimary"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/lesson_body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingBottom="25dp"
+            android:text="@string/dash_lesson_detail"
+            android:textSize="13sp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"/>
+
+        <ImageView
+            android:id="@+id/lesson_image"
+            android:layout_width="306dp"
+            android:layout_height="306dp"
+            android:layout_gravity="center"
+            android:background="@drawable/image_border" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingBottom="4dp"
+            android:paddingTop="23dp"
+            android:text="@string/total_words"
+            android:textColor="@color/colorPrimary"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/lesson_words_missed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/dash_lesson_detail"
+            android:textSize="13sp"
+            android:paddingBottom="10dp"/>
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+
+        <com.interapt.togglit.ui.custom.views.CustomizableToolbar
+            android:id="@+id/vol_profile_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:theme="@style/AppTheme.AppBarOverlayGreen">
+
+            <TextView
+                android:id="@+id/volunteer_bar_title"
+                style="@style/greenToolBarTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textSize="19sp" />
+        </com.interapt.togglit.ui.custom.views.CustomizableToolbar>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:background="@color/colorPrimary">
+
+            <ImageView
+                android:id="@+id/white_border"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:background="@drawable/white_outer_border" />
+
+            <ImageView
+                android:id="@+id/circle_profile_iv"
+                android:layout_width="68dp"
+                android:layout_height="68dp"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/profile_circular_border_imageview" />
+
+            <TextView
+                android:id="@+id/vol_profile_initial"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignBottom="@+id/circle_profile_iv"
+                android:layout_alignLeft="@+id/circle_profile_iv"
+                android:layout_alignRight="@+id/circle_profile_iv"
+                android:layout_alignTop="@+id/circle_profile_iv"
+                android:layout_margin="1dp"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textSize="29sp" />
+
+
+            <TextView
+                android:id="@+id/vol_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/circle_profile_iv"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="11dp"
+                android:textAlignment="center"
+                android:textColor="@color/colorAccentWhite"
+                android:textSize="19sp" />
+
+            <TextView
+                android:id="@+id/commitment_level_profile_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/vol_name"
+                android:gravity="center"
+                android:text="@string/primary"
+                android:textAppearance="@style/TextAppearance.FontPath.Roboto.Light"
+                android:textColor="@color/colorAccentWhite"
+                android:textSize="13sp" />
+
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorAccentWhite"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/phone_no_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingEnd="40dp"
+                android:paddingStart="20dp"
+                android:paddingTop="20dp"
+                android:text="@string/phone_number"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/phone_no_profile_display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autoLink="phone"
+                android:clickable="true"
+                android:paddingEnd="40dp"
+                android:paddingStart="20dp"
+                android:textColorLink="@color/black_alpha_40"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/alt_phone_no_profile_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingEnd="40dp"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:text="@string/alt_phone_number"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/alt_phone_no_profile_display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autoLink="phone"
+                android:paddingEnd="40dp"
+                android:paddingStart="20dp"
+                android:textColorLink="@color/black_alpha_40"
+                android:textSize="15sp" />
+
+
+            <TextView
+                android:id="@+id/email_profile_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingEnd="40dp"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:text="@string/email_address"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/email_profile_display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autoLink="email"
+                android:paddingEnd="40dp"
+                android:paddingStart="20dp"
+                android:textColorLink="@color/black_alpha_40"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/emergency_cont_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingEnd="40dp"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:text="@string/emergency_contact_name"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/emergency_cont_display"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingEnd="40dp"
+                android:paddingStart="20dp"
+                android:textColor="@color/black_alpha_40"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/emergency_cont_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autoLink="phone"
+                android:paddingEnd="40dp"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:text="@string/emergency_contact_phone_number"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/emergency_cont_phone_display"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autoLink="phone"
+                android:paddingEnd="40dp"
+                android:paddingStart="20dp"
+                android:textColorLink="@color/black_alpha_40"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/vol_schools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingEnd="40dp"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:text="SCHOOLS"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/vol_schools_display"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingEnd="40dp"
+                android:paddingStart="20dp"
+                android:textColor="@color/black_alpha_40"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/vol_students"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-8dp"
+                android:paddingEnd="40dp"
+                android:paddingStart="20dp"
+                android:text="STUDENTS"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/vol_students_display"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingEnd="40dp"
+                android:paddingStart="20dp"
+                android:textColor="@color/black_alpha_40"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

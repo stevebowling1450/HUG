@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccentWhite"
+    android:orientation="vertical">
+
+    <com.interapt.togglit.ui.custom.views.CustomizableToolbar
+        android:id="@+id/filter_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorAccentWhite"
+        app:layout_scrollFlags="scroll|exitUntilCollapsed"
+        app:theme="@style/AppTheme.AppBarOverlayGreen">
+
+        <TextView
+            android:id="@+id/cancel_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccentWhite"
+            android:text="Cancel"
+            android:textColor="@color/colorPrimaryBlue"
+            android:textSize="16.8sp" />
+
+        <TextView
+            android:id="@+id/filter_bar_title"
+            style="@style/greenToolBarTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/colorAccentWhite"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Filter by School"
+            android:textColor="@color/black_alpha_40"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/apply_text"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_gravity="end"
+            android:layout_marginRight="17dp"
+            android:background="@color/colorAccentWhite"
+            android:text="Apply"
+            android:textColor="@color/colorPrimaryBlue"
+            android:textSize="16.8sp" />
+    </com.interapt.togglit.ui.custom.views.CustomizableToolbar>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_list_separator_light_grey" />
+
+
+    <RelativeLayout
+        android:id="@+id/row_header"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+        <TextView
+            android:id="@+id/header_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="17dp"
+            android:gravity="center_vertical"
+            android:text="All Schools"
+            android:textColor="@color/black_alpha_40"
+            android:textSize="16.8sp" />
+
+
+        <CheckBox
+            android:layout_margin="20dp"
+            android:padding="20dp"
+            android:button="@null"
+            android:id="@+id/select_all_image"
+            android:layout_width="22dp"
+            android:layout_height="18dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/filter_selector" />
+
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_list_separator_light_grey" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/schools_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="42dp">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+</LinearLayout>

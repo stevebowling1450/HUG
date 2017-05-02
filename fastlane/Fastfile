@@ -1,0 +1,59 @@
+# Customise this file, documentation can be found here:
+# https://github.com/fastlane/fastlane/tree/master/fastlane/docs
+# All available actions: https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Actions.md
+# can also be listed using the `fastlane actions` command
+
+# Change the syntax highlighting to Ruby
+# All lines starting with a # are ignored when running `fastlane`
+
+# If you want to automatically update fastlane if a new version is available:
+# update_fastlane
+
+# This is the minimum version number required.
+# Update this, if you use features of a newer version
+fastlane_version "1.99.0"
+
+default_platform :android
+
+platform :android do
+  before_all do
+    ENV["FL_HOCKEY_NOTES_TYPE"] = "0"
+    ENV["FL_HOCKEY_API_TOKEN"] = "c71c2639f55e40ccbc49c68c8a1cb303"
+    ENV["FL_HOCKEY_NOTIFY"] = "0"
+    ENV["FL_HOCKEY_MANDATORY"] = "1"
+    ENV["FL_HOCKEY_TAGS"] = "interapt"
+  end
+
+  desc "Runs all the tests"
+  lane :test do
+    gradle(task: "test")
+  end
+
+  desc "HockeyApp"
+  lane :adhoc do
+    sh "ruby bump.rb"
+    gradle(task: "assembleDebug")
+    hockey(notes: "- #{last_git_commit[:message]}", apk: "app/build/outputs/apk/hug-reading.apk")
+  end
+
+  desc "Prod Google Play"
+  lane :prod do
+    gradle(task: "assembleRelease")
+    #supply(track: "production")
+  end
+
+  after_all do |lane|
+    # This block is called, only if the executed lane was successful
+
+    # slack(
+    #   message: "Successfully deployed new App Update."
+    # )
+  end
+
+  error do |lane, exception|
+    # slack(
+    #   message: exception.message,
+    #   success: false
+    # )
+  end
+end

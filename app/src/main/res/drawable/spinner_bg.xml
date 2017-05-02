@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item><layer-list>
+        <item><shape android:layout_height="match_parent"
+                     android:layout_width="match_parent">
+            <gradient android:angle="90" android:endColor="#ffffff" android:startColor="#ffffff" android:type="linear" />
+        </shape></item>
+        <item ><bitmap android:gravity="right" android:src="@drawable/chevron" />
+        </item>
+    </layer-list></item>
+</selector>

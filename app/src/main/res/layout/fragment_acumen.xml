@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/acumen_layout_frame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:paddingTop="25dp">
+
+
+            <ImageView
+                android:id="@+id/left_circle"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="78dp"
+                android:background="@drawable/dot"
+                android:backgroundTint="#00b2e2" />
+
+
+            <TextView
+                android:id="@+id/attempt_one_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/left_circle"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="1st Attempt"
+                android:textColor="@color/black_alpha_40" />
+
+
+            <ImageView
+
+                android:id="@+id/right_circle"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/attempt_one_text"
+                android:background="@drawable/dot"
+                android:backgroundTint="#1b3d6e"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/right_circle"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="2nd Attempt"
+                android:textColor="@color/black_alpha_40" />
+        </RelativeLayout>
+
+
+        <android.support.percent.PercentFrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view_acumen"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                app:layout_marginLeftPercent="4%"
+                app:layout_marginRightPercent="4%" />
+        </android.support.percent.PercentFrameLayout>
+
+
+    </LinearLayout>
+
+</FrameLayout>

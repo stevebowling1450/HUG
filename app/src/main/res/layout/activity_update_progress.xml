@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/colorAccentWhite"
+    android:layout_height="match_parent">
+
+    <com.interapt.togglit.ui.custom.views.CustomizableToolbar
+        android:id="@+id/update_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_scrollFlags="scroll|exitUntilCollapsed"
+        app:theme="@style/AppTheme.AppBarOverlayGreen">
+
+        <TextView
+            android:id="@+id/update_title"
+            style="@style/greenToolBarTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Update Progress"
+            android:textSize="18sp"
+            android:ellipsize="end"
+            android:maxLines="1" />
+    </com.interapt.togglit.ui.custom.views.CustomizableToolbar>
+
+
+    <include layout="@layout/update_include" />
+
+
+</LinearLayout>
